@@ -43,6 +43,7 @@
 				<th>Título</th>
 				<th>ISBN</th>
 				<th>Data de publicação</th>
+				<th>Autores</th>
 				<th></th>
 				<th></th>
 			</tr>
@@ -51,6 +52,11 @@
 				<td>${referencia.titulo}</td>
 				<td>${referencia.isbn}</td>
 				<td>${referencia.dtPublicacao}</td>
+				<td>
+					<c:forEach items="${referencia.autores}" var="autor">
+						${autor.nome}
+					</c:forEach>
+				</td>
 				<td><a href="visualiza?id=${referencia.id}">Alterar</a>
 				<td><a href="remove?id=${referencia.id}">Remover</a></td>
 			</tr>

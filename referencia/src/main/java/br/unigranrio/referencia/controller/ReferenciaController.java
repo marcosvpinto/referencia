@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import br.unigranrio.referencia.model.Autor;
 import br.unigranrio.referencia.model.Referencia;
 
 @Controller
@@ -26,8 +27,11 @@ public class ReferenciaController {
 	}
 	
 	@RequestMapping("novo")
-	public String novo(){
-		return "referencia/adiciona";
+	public ModelAndView novo(){
+		List<Autor> autores = AutorController.autores;
+		ModelAndView mv = new ModelAndView("referencia/adiciona");
+		mv.addObject("autores", autores);
+		return mv;
 	}
 
 	@RequestMapping("lista")

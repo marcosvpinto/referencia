@@ -15,7 +15,7 @@ import br.unigranrio.referencia.model.Autor;
 public class AutorController {
 
 	int id = 0;
-	List<Autor> autores = new ArrayList<Autor>();
+	static List<Autor> autores = new ArrayList<Autor>();
 	
 	@RequestMapping("adiciona")
 	public String adiciona(Autor autor){

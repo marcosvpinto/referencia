@@ -1,6 +1,5 @@
 package br.unigranrio.referencia.model;
 
-import java.util.List;
 
 public class Referencia {
 
@@ -8,7 +7,11 @@ public class Referencia {
 	private String titulo;
 	private String isbn;
 	private String dtPublicacao;
-	private List<Autor> autores;
+	/*
+	 * Aqui deveria ser um List, mas pela falta de um converter para transportar a informação 
+	 * do html para cá, deixamos como apenas 1 objeto, para não haver erro. 
+	 */
+	private Autor autores;
 	
 	public Referencia() {
 		// TODO Auto-generated constructor stub
@@ -46,11 +49,11 @@ public class Referencia {
 		this.dtPublicacao = dtPublicacao;
 	}
 
-	public List<Autor> getAutores() {
+	public Autor getAutores() {
 		return autores;
 	}
 
-	public void setAutores(List<Autor> autores) {
+	public void setAutores(Autor autores) {
 		this.autores = autores;
 	}
 	

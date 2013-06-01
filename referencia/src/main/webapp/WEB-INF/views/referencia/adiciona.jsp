@@ -72,6 +72,12 @@
 			<br />
 			<input type="date" id="dtPublicacao" name="dtPublicacao" class="input-block-level" placeholder="Data de Publicação" />
 			<br />
+			<!-- Um select recebe um objeto, mas um multiselect passa um Array, de qualquer forma, precisaríamos de uma List, ou seja, sem um "converter" não vai "rolar" -->
+			<select name="autores">
+				<c:forEach items="${autores}" var="autor">
+					<option value="${autor}">${autor.nome}</option>
+				</c:forEach>
+			</select>
 			<input type="submit" value="Salvar" id="btnSalvar" class="btn btn-large btn-primary" />
 		
 		</form>

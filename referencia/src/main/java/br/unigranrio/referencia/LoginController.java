@@ -10,6 +10,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.unigranrio.referencia.model.Usuario;
 
+
+/**
+ * 
+ * @author Marcos Vinícius Pinto - 5305123
+ * 		   Carine Lopes da Silva Fortes - 5304981
+ *         Glauco Lima Louzada - 5304987
+ *         Giovani Alves Cata Preta - 5305217
+ *         Leonardo Peixoto dos Santos - 5305044
+ *         
+ * @periodo 8°
+ * @materia EIN228-20 Sistemas Ditribuidos III
+ *
+ */
+
 @Controller
 public class LoginController {
 	
