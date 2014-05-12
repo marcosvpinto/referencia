@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @PropertySource({ "classpath:persistence-mysql.properties" })
-@ComponentScan({ "br.com.mvpdev.base.persistence" })
+@ComponentScan({ "br.com.mvpdev.base" })
 public class PersistenceConfig {
 
     @Autowired

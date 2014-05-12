@@ -12,7 +12,7 @@
 			Nome: <input type="text" name="nome" /> <br/>
 			Login: <input type="text" name="login" /> <br/>
 			Senha: <input type="text" name="senha" /> <br/>
-			<input type="submit" value="Acessar" />
+			<input type="submit" value="Cadastrar" />
 		</form>
 	</body>
 </html>

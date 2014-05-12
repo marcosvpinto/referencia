@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,8 +21,8 @@ public class LoginController {
     @Autowired
     IUsuarioDao usuarioDao;
 
-    private void carregaUsuarios() {
-	usuarios = usuarioDao.findAll();
+    private List<Usuario> carregaUsuarios() {
+	return usuarioDao.findAll();
     }
 
     @RequestMapping("/")
@@ -35,9 +36,10 @@ public class LoginController {
 	return "redirect:login";
     }
 
+    @Transactional
     @RequestMapping("login")
     public String efetuaLogin(Usuario usuario, HttpSession session) {
-	carregaUsuarios();
+	usuarios = carregaUsuarios();
 	for (Usuario usuario2 : usuarios) {
 	    if (usuario2.getLogin().equals(usuario.getLogin())
 		    && usuario2.getSenha().equals(usuario.getSenha())) {
