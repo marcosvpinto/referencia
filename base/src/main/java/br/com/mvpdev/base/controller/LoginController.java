@@ -10,14 +10,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.mvpdev.base.models.Usuario;
-import br.com.mvpdev.base.persistence.impl.UsuarioDao;
+import br.com.mvpdev.base.persistence.IUsuarioDao;
 
 @Controller
 public class LoginController {
 
     List<Usuario> usuarios = new ArrayList<Usuario>();
+
     @Autowired
-    UsuarioDao usuarioDao;
+    IUsuarioDao usuarioDao;
 
     private void carregaUsuarios() {
 	usuarios = usuarioDao.findAll();

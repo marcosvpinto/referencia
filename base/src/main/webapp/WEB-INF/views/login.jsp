@@ -11,7 +11,9 @@
 		<form action="login" method="post">
 			Login: <input type="text" name="login" /> <br/>
 			Senha: <input type="text" name="senha" /> <br/>
-			<input type="submit" value="Acessar" />
+			<input type="submit" value="Acessar" /> <br />
 		</form>
+		
+		<h3><a href="usuario/novo">Criar novo usuário</a></h3>
 	</body>
 </html>
